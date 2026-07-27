@@ -32,7 +32,7 @@ function findRoomByIdWithCallback(roomId, callback) {
   }, 50);
 }
 
-
+***************************************
 function findRoomById(roomId) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -57,7 +57,7 @@ function findRoomById(roomId) {
   });
 }
 
-
+**************************************
 function calculateAvailableBeds(room) {
  
   return Math.max(room.capacity - room.bookedGuests, 0);
@@ -79,7 +79,7 @@ function ensureRoomAvailable(room) {
 }
 
 
-
+******************************************************
 function validateGuest(guest) {
   // Optional Chaining + trim + Nullish Coalescing
   const name = guest?.name?.trim() ?? '';
@@ -100,7 +100,7 @@ function validateGuest(guest) {
 
   return { name, email };
 }
-
+**********************************************
 function bookRoomWithPromises(roomId, guest) {
   return findRoomById(roomId).then((room) => {
   
@@ -120,7 +120,7 @@ function bookRoomWithPromises(roomId, guest) {
   });
 }
 
-
+***************************************************
 
 async function bookRoom(roomId, guest) {
   try {
@@ -152,7 +152,7 @@ async function bookRoom(roomId, guest) {
     };
   }
 }
-
+************************************************
 function printScenario(label, result) {
 
   console.log(`\\n${label}`);
@@ -160,7 +160,7 @@ function printScenario(label, result) {
  
   console.log(JSON.stringify(result, null, 2));
 }
-
+***********************************************
 async function runDemonstration() {
   console.log('Hotel Booking System');
 
