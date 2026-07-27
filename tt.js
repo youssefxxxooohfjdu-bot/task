@@ -17,7 +17,7 @@ const rooms = [
 
 
 function findRoomByIdWithCallback(roomId, callback) {
-  // setTimeout لمحاكاة قاعدة بيانات أو API
+ 
   setTimeout(() => {
    
     const room = rooms.find((roomItem) => roomItem.id === roomId);
@@ -36,7 +36,7 @@ function findRoomByIdWithCallback(roomId, callback) {
 function findRoomById(roomId) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      // التحقق من وجود roomId
+     
       if (!roomId) {
         reject(new Error('Room id is required'));
         return;
@@ -81,7 +81,7 @@ function ensureRoomAvailable(room) {
 
 ******************************************************
 function validateGuest(guest) {
-  // Optional Chaining + trim + Nullish Coalescing
+  
   const name = guest?.name?.trim() ?? '';
 
 
